@@ -24,7 +24,6 @@ namespace OfferZoneAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //DbContext ctx;
             services.AddAuthentication(auth =>
             {
                 auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -32,7 +31,7 @@ namespace OfferZoneAPI
             }).AddJwtBearer(jwtAuth =>
             {
                 jwtAuth.RequireHttpsMetadata = false;
-                jwtAuth.SaveToken = true;
+                jwtAuth.SaveToken = true
                 jwtAuth.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
