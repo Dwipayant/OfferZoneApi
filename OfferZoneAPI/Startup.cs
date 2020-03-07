@@ -33,8 +33,6 @@ namespace OfferZoneAPI
             {
                 jwtAuth.RequireHttpsMetadata = false;
                 jwtAuth.SaveToken = true;
-                //jwtAuth.Audience = "8d708afe-2966-40b7-918c-a39551625958";
-                //jwtAuth.Authority = "https://login.microsoftonline.com/a1d50521-9687-4e4d-a76d-ddd53ab0c668/";
                 jwtAuth.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
